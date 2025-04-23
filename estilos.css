@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --fondo: #0d0d0d;
+    --texto: #f1f1f1;
+    --acento1: #00ffd5;
+    --acento2: #72ffff;
+    --acento3: #a78bfa;
+    --acento-hover: #00c9a7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-top: 15px;
+    color: var(--acento1);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.btn-descargar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--acento1);
+    color: #000;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+    background-color: var(--acento-hover);
+}
+
+/* Foto de perfil */
+.foto-perfil {
+    display: flex;
+    justify-content: center;
+}
+
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--acento3);
+    box-shadow: 0 0 25px var(--acento3);
+    transition: transform 0.3s ease;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.05);
+}
+
+/* Secciones */
+section {
+    margin-bottom: 50px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--acento3);
+    border-bottom: 2px solid var(--acento3);
+    display: inline-block;
+}
+
+/* Proyectos */
+.proyecto {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.proyecto h3 {
+    color: var(--acento2);
+    margin-bottom: 10px;
+}
+
+.proyecto a {
+    color: var(--acento1);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.proyecto a:hover {
+    text-decoration: underline;
+    color: var(--acento-hover);
+}
+
+/* Contacto */
+#contacto a {
+    color: var(--acento1);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contacto a:hover {
+    color: var(--acento-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    padding: 20px 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .foto-perfil img {
+        width: 120px;
+        height: 120px;
+    }
+}
